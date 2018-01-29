@@ -45,7 +45,7 @@ namespace ConsoleApplication4
 		/// </summary>
 		/// <param name="table"></param>
 		/// <param name="message"></param>
-		static void fillTable(String[] table, string message)
+		static void fillTable(String[] table, String message)
 		{
 			for (int i = 0; i < table.Length; i++)
 			{
@@ -78,7 +78,7 @@ namespace ConsoleApplication4
 		/// </summary>
 		/// <param name="table"></param>
 		/// <param name="message"></param>
-		static void fillTable(int[] table, string message) {
+		static void fillTable(int[] table, String message) {
 			int coef = 0;
 			for (int i = 0; i < table.Length; i++) {
 				Console.WriteLine(message + " "+i);
@@ -132,7 +132,11 @@ namespace ConsoleApplication4
 			}
 		}
 
-		static void informUser(string message)
+		/// <summary>
+		/// Allow to clean and write a message in the standard out
+		/// </summary>
+		/// <param name="message" ty></param>
+		static void informUser(String message)
 		{
 			Console.WriteLine(message);
 			Console.WriteLine("Type a key to continue...");
@@ -141,20 +145,74 @@ namespace ConsoleApplication4
 
 		}
 
+		/// <summary>
+		/// Allow to compute the average of each student
+		/// </summary>
+		/// <param name="marks"> array of marks</param>
+		/// <param name="coefficient"> array of coefficient </param>
+		static void computeAverage(int [,] marks, int[] coefficient) {
+			// Ajouter le code y relatif ici 
+		}
+
+		/// <summary>
+		/// Allow to sort Ascendant an array of String 
+		/// </summary>
+		/// <param name="table"></param>
+		static void sortArrayAsc(String[] table) { 
+			// Ajouter le code y relatif ici 
+			// Utiliser l'algorithme QuickSort
+		}
+
+		/// <summary>
+		/// Allow to sort Descendant an array of String
+		/// </summary>
+		/// <param name="table"></param>
+		static void sortArrayDec(String[] table)
+		{
+			// Ajouter le code y relatif ici 
+			//Utiliser l'algorithme tri fusion
+		}
+
+		/// <summary>
+		/// Allow to sort Ascendant an array of integer
+		/// </summary>
+		/// <param name="table"></param>
+		static void sortArrayAsc(int[] table)
+		{
+			// Ajouter le code y relatif ici 
+			//utiliser l'algorithme de votre choix
+		}
+
+		/// <summary>
+		/// Allow to sort Descendant an array of integer
+		/// </summary>
+		/// <param name="table"></param>
+		static void sortArrayDec(int[] table)
+		{
+			// Ajouter le code y relatif ici 
+			//utiliser l'algorithme de votre choix
+		}
+
+
 		static void Main(string[] args)
 		{
 			string[] students = new String[7]; // Containts Students name
 			string[] subjects = new String[10]; // Containts Subjects informations
 			int [] coefficient = new int[10]; // Containts coefficient information
 			int[,] marks = new int[7, 10];
+			int[] average = new int[7]; 
 			
 			fillTable(students, "Entrer un nom svp");
 			fillTable(subjects, "Entrer une matière svp");
 			fillTable(coefficient, "Entrer une valeur entière SVP");
 			fillStumark(marks, subjects, students, 0, "Fill marks of ", "Enter mark (between 0 and 20)");
-			//displayTable(etudiants, "Liste des étudiants", "Etudiant n°");
-			//displayTable(etudiants, "Liste des matières", "Matière n°");
-			//fillTable(coefficient, "Donner la valeur du coefficient ");
+			//Calculer et afficher la moyenne de chaque élève par ordre croissant
+			//Calculer et afficher la moyenne de chaque élève par ordre décroissant
+			//Ecrire une fonction qui prend en entré le numéro d'un étudiant et retourne sa moyenne et son rang
+			// Ecrire une fonction qui prend le rand d'une personne et retourne son nom
+			// Ecrire une fonction qui retourne le nom du meilleur élève dans chaque matière
+			// Ecrire une fonciton qui retourne la liste des élèves donc la note est supérieure à la moyenne
+			// Ecrire une fonction qui retourne la liste des élèves donc la note est inférieure à la moyenne
 			Console.ReadLine();
 		}
 	}
